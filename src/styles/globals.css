@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav{
+background-color: brown;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  .custom h1   {
+    font-size: 32px;
+    
+  }
+  .custom h2{
+    font-size: 32px;
+  }
+  .custom h3, .custom h4, .custom h5, .custom h6{
+    font-size: 26px;
+  }
+  .custom img{
+ width: 800px;
+ height: 400px;
+  }
+  .custom li {
+    list-style-type: disc; /* Bullets add karega */
+     /* Indentation */
+  }
+  .custom div > a {
+    background-color: rgb(245, 118, 139) !important;
+    color: #fff !important;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center; /* Vertical Center */
+    justify-content: center; /* Horizontal Center */
+    text-align: center; /* Text center */
+    width: fit-content; /* ✅ Content ke hisaab se width set hogi */
+    max-width: 100%;
+    margin: auto;
+    margin-top:15px ;
+    margin-bottom:15px ;
+    font-size: 18px;
+  font-weight: 700;
+
+}
+.custom div > a:hover {
+  background-color: rgb(39, 39, 125) !important;
+}
+  .custom p strong{
+    color:rgb(224, 127, 143);
+  }
+  .price ul li.cross::before {
+    content: "X"; 
+    color: red !important;  /* Icon color red */
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 15px;  /* Adjust size as needed */
+}
+.price ul li:not(.cross)::before {
+  content: "✔"; 
+  color: rgb(228, 122, 140) !important;  /* Icon color green */
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.price ul li {
+  position: relative; /* Ensure proper positioning */
+}
+
+.price ul li::after {
+  content: "";
+  display: block;
+  width: 100%; /* Full width of the li */
+  height: 1px; /* Line thickness */
+  background-color: rgb(230, 226, 226); /* Line color */
+  margin: 10px 0; /* Space before and after the line */
+}
+.data h1, .data h2, .data h3, .data h4, .data h5, .data h6 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.data ul li::before {
+  content: "✔"; /* Unicode for checkmark */
+  color: rgb(228, 122, 140) !important; /* Tick color pink */
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.data p> a{
+  color:rgb(224, 127, 143);
+}
