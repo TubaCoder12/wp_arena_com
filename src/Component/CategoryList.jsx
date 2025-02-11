@@ -12,7 +12,6 @@
   };
 
   const visiblePosts = categories.slice(0, visibleBlogs);
-
   return (
     <section className="relative py-4 sm:py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
       <div className="relative">
@@ -45,13 +44,10 @@
                       </div>
                       <div className="flex flex-col space-y-4 flex-1">
                         <h3 className="text-2xl font-semibold">
-                          <Link
-                            href={{
-                              pathname: `/post/ ${post.id}`,
-                              query: { id: post.id },
-                            }}
+                          <Link href={`/post/ ${post.id}`}
+                            
                             className="text-gray-800 hover:text-[#2980b9]"
-                          >
+                            >
                             {post.title}
                           </Link>
                         </h3>

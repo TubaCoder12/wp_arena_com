@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaPinterest, FaWhatsapp, FaLinkedin, FaReddit, FaTelegram, FaLink, FaTimes } from "react-icons/fa";
-import { IoIosHome } from "react-icons/io";
+
+import ServiceSocial from "../ServiceSocial";
 
 // GraphQL Query
 const GET_SERVICE_BY_ID = gql`
@@ -13,6 +13,7 @@ const GET_SERVICE_BY_ID = gql`
       title
       content
       date
+      slug
       featuredImage {
         node {
           sourceUrl
@@ -48,35 +49,9 @@ const ServiceDetails = ({ service, error }) => {
   return (
     <div className="mx-auto px-8 max-w-7xl">
       {/* Navbar */}
-      <div className="bg-white  pt-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-          {/* Left Section - Home Button */}
-          <div>
-            <Link href="/">
-              <button className="flex text-blue-600 font-semibold text-lg hover:underline">
-                <IoIosHome className="mt-1" /> Home
-              </button>
-            </Link>
-          </div>
+    
 
-          {/* Right Section - Share Icons */}
-          <div className="flex items-center gap-4">
-            <span className="text-blue-600 font-semibold cursor-pointer hover:underline">Share</span>
-            <div className="flex items-center space-x-3">
-              <FaFacebook className="text-blue-700 text-3xl hover:scale-110 cursor-pointer" />
-              <FaTimes className="text-red-500 hover:scale-110 text-3xl cursor-pointer" />
-              <FaPinterest className="text-red-600 hover:scale-110 text-3xl cursor-pointer" />
-              <FaWhatsapp className="text-green-500 hover:scale-110 text-3xl cursor-pointer" />
-              <FaLinkedin className="text-blue-500 hover:scale-110 text-3xl cursor-pointer" />
-              <FaReddit className="text-orange-500 hover:scale-110 text-3xl cursor-pointer" />
-              <FaTelegram className="text-blue-400 hover:scale-110 text-3xl cursor-pointer" />
-              <FaLink className="text-black hover:scale-110 text-3xl cursor-pointer" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-     
+    <ServiceSocial slug={service.slug}/>
 
       {/* Overview Section */}
       <div ref={overviewRef} className="bg-slate-50 p-4 rounded-lg shadow-lg mb-8">
@@ -108,7 +83,7 @@ const ServiceDetails = ({ service, error }) => {
 
       </div>
         <div
-          className="service-content text-gray-700"
+          className="service-content text-gray-700 data"
           dangerouslySetInnerHTML={{ __html: service.content }}
         />
       </div>
@@ -124,7 +99,7 @@ const ServiceDetails = ({ service, error }) => {
             <h3 className="text-xl font-bold bg-blue-900 text-white py-4 rounded-t-lg">{plan.title}</h3>
             <p className="text-3xl font-semibold text-pink-500 my-4">{plan.price}</p>
             <div
-              className="text-left text-gray-700 mb-6"
+              className="text-left text-gray-700 mb-6 price"
               dangerouslySetInnerHTML={{ __html: plan.desc }}
             />
             <hr className="my-4 border-gray-300" />
@@ -165,6 +140,7 @@ export async function getStaticPaths() {
       }
     }
   `;
+  
   try {
     const data = await client.request(GET_ALL_SERVICES);
     const paths = data.services.nodes.map((service) => ({

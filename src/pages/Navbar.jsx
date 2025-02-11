@@ -1,15 +1,17 @@
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
-import Link from "next/link"; // Import Next.js Link component
+import Link from "next/link";
 
 export default function Navbar() {
+  const hello = () => {
+   console.log("hiii")
+  };
+  
   return (
-    <nav className="flex items-center justify-between bg-white shadow-md h-20 px-4 sm:px-6 md:px-10 lg:px-24">
-      {/* Left Section: Logo and Links */}
+    <nav className="flex items-center justify-between bg-white shadow-md h-20 px-4 sm:px-6 md:px-12 lg:px-12">
       <div className="flex items-center space-x-4">
-        {/* Logo with Link */}
         <Link href="/">
-          <div className="relative h-16 w-16 sm:h-40 sm:w-40 lg:h-40 lg:w-40 md:h-40 md:w-40 cursor-pointer">
+          <div className="relative h-20 w-40 cursor-pointer">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -20,8 +22,11 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* Hamburger Icon for Small Screens */}
+        
+
         {/* Links */}
-        <ul className="hidden md:flex items-center space-x-6 text-sm font-medium text-black">
+        <ul className="hidden sm:hidden md:hidden lg:flex  lg:space-x-6 items-center space-x-6 text-sm  text-black">
           <li>News</li>
           <li>Tutorials</li>
           <li>Reviews</li>
@@ -47,7 +52,13 @@ export default function Navbar() {
         <button className="border border-black px-3 py-2 rounded font-semibold hover:bg-black hover:text-white">
           MY ACCOUNT
         </button>
+        <button className="lg:hidden xl:hidden sm:flex md:flex cursor-pointer" onClick={() => alert("hiii")}>
+  <FaBars />
+</button>
+
+
       </div>
+     
     </nav>
   );
 }

@@ -10,6 +10,8 @@ import Routes from "./Routes";
 import HostingQuiz from "./HostingQuiz";
 import Footer from "./Footer";
 import { useState } from "react";
+import Head from "next/head";
+import Navbar2 from "./Navbar2";
 
 export async function getStaticProps() {
   const postsQuery = client.query({
@@ -185,7 +187,12 @@ const handleRouteClick = (route) => {
 };
   return (
     <>
-     
+      <Head>
+        <title>{pageData.rankMathTitle}</title>
+        <meta name="description" content={pageData.rankMathDescription} />
+        <meta name="keywords" content={pageData.rankMathFocusKeyword} />
+      </Head>
+        
         <PostList pageData={pageData} />
         <Routes onRouteClick={handleRouteClick}  />
         {activeRoute === "Reviews" && <CategoryList categories={categories} />}
