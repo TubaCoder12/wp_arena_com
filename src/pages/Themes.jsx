@@ -8,28 +8,25 @@ import client from "./Apollo";
 
 // ✅ GraphQL Query
 export const GET_POSTS_BY_CATEGORY = gql`
-  query GetPostsByCategory($categoryId: Int!) {
-    posts(where: { categoryId: $categoryId }) {
-      nodes {
-        id
-        slug
-        title
-        date
-        excerpt
-        featuredImage {
-          node {
-            sourceUrl
-            altText
-          }
-        }
-        author {
-          node {
-            name
-          }
+  query {
+  ourthemes {
+    nodes {
+      id
+      databaseId
+      slug
+      uri
+      title
+      content
+      date
+      featuredImage {
+        node {
+          sourceUrl
         }
       }
+      acf
     }
   }
+}
 `;
 
 // ✅ Timeline Component
@@ -77,30 +74,18 @@ const Timeline = ({ posts }) => {
                         <h3 className="text-2xl font-semibold">
                           <Link
                             href={{
-                              pathname: `/post/${post.id}`,
-                              query: { id: post.id },
+                              pathname: `/Theme/${post.slug}`,
+                              query: { id: post.slug },
                             }}
                             className="text-gray-800 hover:text-[#2980b9]"
                           >
                             {post.title}
                           </Link>
                         </h3>
-                        <p className="text-sm font-semibold text-black flex">
-                          Recent updated by
-                          <span className="text-[#2980b9] ml-2 flex items-center">
-                            {post.author?.node?.name || "Unknown Author"}
-                            <Image
-                              src="/share-icon.png"
-                              alt="share-icon"
-                              width={15}
-                              height={15}
-                              className="ml-2 bg-[#297fba] p-0.5 rounded-sm"
-                            />
-                          </span>
-                        </p>
+                        
                         <div
                           className="text-lg text-black line-clamp-3"
-                          dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                          dangerouslySetInnerHTML={{ __html: post.content }}
                         />
                       </div>
                     </div>
@@ -145,27 +130,27 @@ const Timeline = ({ posts }) => {
 
 // ✅ getStaticProps
 export async function getStaticProps() {
-  try {
-    const { data } = await client.query({
-      query: GET_POSTS_BY_CATEGORY,
-      variables: { categoryId: 5 },
-    });
-
-    return {
-      props: {
-        posts: data.posts.nodes || [],
-      },
-      revalidate: 86400, // ✅ Revalidate after 24 hours
-    };
-  } catch (error) {
-    console.error("Error fetching posts:", error);
-    return {
-      props: {
-        posts: [],
-      },
-    };
+    try {
+      const { data } = await client.query({
+        query: GET_POSTS_BY_CATEGORY,
+      });
+  
+      return {
+        props: {
+          posts: data.ourthemes.nodes || [],
+        },
+        revalidate: 86400, // ✅ Revalidate after 24 hours
+      };
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+      return {
+        props: {
+          posts: [],
+        },
+      };
+    }
   }
-}
+  
 
 // ✅ Page Component
 export default function Page({ posts }) {

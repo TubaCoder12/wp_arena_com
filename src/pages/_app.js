@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
     <Navbar/>
-      <Navbar2 /> {/* ✅ Ab ye sahi tarike se render hoga */}
+      <Navbar2 /> 
       <Component {...pageProps} />
     </>
   );

@@ -1,45 +1,59 @@
-export default function HostingQuiz() {
-    return (
-      <div
-        className="relative bg-cover bg-center bg-no-repeat p-12 md:p-16 rounded-lg mx-12"
-        style={{
-          backgroundImage: "url('/2.jfif')", // Static background image
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center md:flex-row md:items-start">
-          {/* Illustration (Replace with an actual image if needed) */}
-          <div className="flex-1 flex justify-center">
-            {/* Add your image here if needed */}
+import Image from "next/image";
+import React from "react";
+
+const HostingQuiz = () => {
+  return (
+    <section className="px-4 lg:px-12">
+      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center gap-12 items-center right-bg-custom-img relative p-6 rounded">
+        {/* Image Section */}
+        <div className="lg:max-w-md w-full">
+          <Image 
+            src="/quiz-banner.png"
+            width={700}
+            height={750}
+            alt="Quiz Banner: Which WordPress Hosting is Best for You?" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="w-full max-w-2xl bg-no-repeat bg-contain bg-right mt-3 py-5 text-center lg:text-left">
+          <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Which WordPress Hosting is Best for You?
+          </h1>
+          <p className="text-lg font-medium mt-4">
+            Unsure which WordPress hosting company to choose? Simply answer a few questions, and our recommendation engine will identify the best option for you.
+          </p>
+
+          {/* Bullet Points */}
+          <div className="mt-6 space-y-4">
+            {[
+              "It is a long established fact that a reader will be distracted by the readable content of a page.",
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            ].map((text, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <Image 
+                  src="/arrow.png"
+                  width={32}
+                  height={16}
+                  alt="Arrow icon"
+                  className="flex-shrink-0"
+                />
+                <p className="text-lg md:text-base font-medium">{text}</p>
+              </div>
+            ))}
           </div>
-  
-          {/* Text Section */}
-          <div className="flex-1 mt-8 md:mt-0 md:ml-8 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              Which WordPress Hosting is Best for You?
-            </h2>
-            <p className="text-gray-600">
-              Unsure which WordPress hosting company to choose? Simply answer a
-              few questions, and our recommendation engine will identify the best
-              option for you.
-            </p>
-            <ul className="mt-4 text-gray-600 space-y-2">
-              <li>
-                <span className="text-blue-500 font-extrabold">→</span> It is a
-                long established fact that a reader...
-              </li>
-              <li>
-                <span className="text-blue-500 font-extrabold">→</span> Lorem
-                Ipsum is simply dummy text...
-              </li>
-            </ul>
-            <button className="mt-6 bg-black text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">
-              Take the Quiz
+
+          {/* Call-to-Action Button */}
+          <div className="mt-6 flex justify-center lg:justify-start">
+            <button className="w-[170px] h-[45px] uppercase py-2 px-4 bg-gray-800 hover:bg-[#2980b9] font-semibold rounded-sm text-white transition duration-300">
+              Take the quiz
             </button>
           </div>
         </div>
       </div>
-    );
-  }
-  
+    </section>
+  );
+};
+
+export default HostingQuiz;

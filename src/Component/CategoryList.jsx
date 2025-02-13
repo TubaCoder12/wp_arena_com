@@ -87,13 +87,11 @@
                     </div>
                   </div>
 
-                  {index === visiblePosts.length - 1 && (
-                    <div className="absolute left-[46px] bottom-[-90px] w-4 h-4 bg-gray-800 rounded-full"></div>
-                  )}
+                  
                 </div>
               ))}
             </div>
-
+            <div className="absolute bottom-0 left-0 sm:left-[46px] w-3 sm:w-4 h-3 sm:h-4 bg-gray-800 rounded-full"></div>
             {visibleBlogs < categories.length && (
               <div className="text-center mt-8">
                 <button

@@ -61,7 +61,7 @@ const BlogContent = ({ content, setToc }) => {
     
   
     setTimeout(() => {
-      document.querySelectorAll("h2, h3, h4, h5, h6").forEach((heading, index) => {
+      document.querySelectorAll("h2, h3, h4").forEach((heading, index) => {
         heading.id = `heading-${index}`;
       });
       console.log("Headings updated with IDs!");
@@ -134,8 +134,6 @@ const PostDetails = ({ post, error }) => {
 >
   {heading.text}
 </button>
-
-
             </li>
           ))}
         </ul>

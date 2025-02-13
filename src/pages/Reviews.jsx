@@ -40,7 +40,7 @@ const Timeline = ({ posts }) => {
 
   return (
     <>
-      <div className="font-bold text-4xl mt-4 ml-28">Tutorials</div>
+      <div className="font-bold text-4xl mt-4 ml-28">Reviews</div>
    
     <section className="relative  sm:py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
      
@@ -148,7 +148,7 @@ export async function getStaticProps() {
   try {
     const { data } = await client.query({
       query: GET_POSTS_BY_CATEGORY,
-      variables: { categoryId: 5 },
+      variables: { categoryId: 9 },
     });
 
     return {
