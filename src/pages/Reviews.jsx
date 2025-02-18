@@ -58,7 +58,7 @@ const Timeline = ({ posts }) => {
             <div className="space-y-4 w-full">
               {visiblePosts.map((post, index) => (
                 <div key={post.id} className="relative pl-8 lg:pl-36">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="bg-white rounded-lg border-b overflow-hidden">
                     <div className="flex flex-col lg:flex-row gap-4 p-4 sm:p-6">
                       <div className="w-full lg:w-[400px] h-[200px] relative">
                         {post.featuredImage?.node?.sourceUrl ? (

@@ -39,7 +39,7 @@ export default function SocialShare({ slug }) {
   };
 
   return (
-    <div className="flex flex-wrap gap-2 py-4 w-[95%]">
+    <div className="flex flex-wrap gap-2 py-6 w-[95%]">
       {/* Facebook (Always Visible) */}
       <a title="Share on Facebook" href={fbShareUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-white font-medium border border-blue-700">
         <div className="p-3 bg-blue-900 flex items-center justify-center">

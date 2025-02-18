@@ -6,7 +6,7 @@ import ServicesIcon from "../../public/services-bar-icon.png";
 
 const ServicesBar = () => {
   const MyServicesData = [
-    { id: 1, ServicesIcon: "/nav1.png", ServicesTitle: "WordPress Blog", ServicesUrl: "/WordpressHosting" },
+    { id: 1, ServicesIcon: "/nav1.png", ServicesTitle: "WordPress Blog", ServicesUrl: "/WordpressBlog" },
     { id: 2, ServicesIcon: "/nav2.png", ServicesTitle: "WordPress Hosting", ServicesUrl: "/Hosting" },
     { id: 3, ServicesIcon: "/nav3.png", ServicesTitle: "Pro Services", ServicesUrl: "/ProService" },
     { id: 4, ServicesIcon: "/nav4.png", ServicesTitle: "Wp Tutorials", ServicesUrl: "/Tutorials" },
@@ -65,14 +65,17 @@ const ServicesBar = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex bg-[#2a77ab] flex-wrap justify-center gap-4 w-full items-center text-white py-4">
+
+
+      <div className="hidden lg:flex bg-[#2980b9] flex-wrap justify-center gap-4 w-full items-center text-white py-4">
+        
         {MyServicesData.map((elem) => (
           <Link
             href={elem.ServicesUrl}
             key={elem.id}
             className="group rounded-md overflow-hidden transition duration-300"
           >
-            <div className="flex items-center border-2 border-[#5288c1] rounded w-[271px] h-[42px] px-4 py-1.5 relative">
+            <div className="flex items-center border-[2.75px] border-[#5288c1] bg-[#2a78ab] rounded w-[271px] h-[42px] px-4 py-1.5 relative">
               <div className="absolute inset-0 bg-black transform -translate-x-full transition-transform duration-500 ease-out lg:hidden"></div>
               <div className="pr-4 relative z-10">
                 <Image src={elem.ServicesIcon} alt={elem.ServicesTitle} width={20} height={20} />

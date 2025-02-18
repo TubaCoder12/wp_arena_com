@@ -21,7 +21,7 @@ const Routes = ({ onRouteClick }) => {
                 e.preventDefault(); // Prevent page reload
                 onRouteClick(route.label);
               }}
-              className={` px-4 py-2 border-2 border-black rounded-md transition duration-300 sm: 
+              className={` px-4 py-2 border-2 border-black rounded transition duration-300 sm: 
                 ${
                   pathname?.startsWith(route.href)
                     ? "bg-black text-white"

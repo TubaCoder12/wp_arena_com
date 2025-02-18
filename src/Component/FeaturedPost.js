@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FeaturedPosts({ posts }) {
   if (!posts || posts.length === 0) return <p>No posts available</p>;
-  console.log("Posts Data:", posts);
+ 
 
   return (
     <div className="py-16">

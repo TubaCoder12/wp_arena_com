@@ -1,35 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.body{
+  font-family: sans-serif;
+}
 .nav{
 background-color: brown;
 }
 html {
     scroll-behavior: smooth;
   }
-  .custom h1   {
+  .custom{
+    line-height: 2 !important;
+    font-size: 18px;
+  }
+  .custom p{
+    margin :10px 0;
+  }
+  .custom h1{
     font-size: 32px;
-    
   }
   .custom h2{
     font-size: 32px;
   }
   .custom h3, .custom h4, .custom h5, .custom h6{
-    font-size: 26px;
+    font-size: 28px;
+    margin: 10px;
   }
   .custom img{
  width: 800px;
  height: 400px;
+ margin: 35px 0;
   }
   .custom li {
     list-style-type: disc; /* Bullets add karega */
      /* Indentation */
   }
   .custom div > a {
-    background-color: rgb(245, 118, 139) !important;
+    background-color: black !important;
     color: #fff !important;
-    padding: 20px;
+    padding: 12px;
     border-radius: 6px;
     display: flex;
     align-items: center; /* Vertical Center */
@@ -38,17 +48,59 @@ html {
     width: fit-content; /* ✅ Content ke hisaab se width set hogi */
     max-width: 100%;
     margin: auto;
-    margin-top:15px ;
-    margin-bottom:15px ;
+    margin-top:25px ;
+    margin-bottom:25px ;
     font-size: 18px;
   font-weight: 700;
+  border-radius: 5px;
 
 }
 .custom div > a:hover {
-  background-color: rgb(39, 39, 125) !important;
+  background-color: rgb(91, 161, 226) !important;
 }
   .custom p strong{
     color:rgb(224, 127, 143);
+  }
+
+
+
+  /* Table Header (th) Styling */
+/* Table Styling */
+.custom table {
+  width: 100%;
+  border-collapse: collapse; /* Borders ko combine karta hai */
+  border: 2px solid #eeebeb; /* Table ke outer border */
+}
+
+/* Table Header (th) Styling */
+.custom th {
+  background-color: #f97316; /* Orange-500 */
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #eeebeb; /* Har header ke beech line */
+  font-weight: bold;
+}
+
+/* Table Data (td) Styling */
+.custom td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #eeebeb; /* Har cell ke beech line */
+}
+
+/* Zebra Striping */
+.custom tr:nth-child(even) td {
+  background-color: #f3f4f6; /* Light Gray */
+}
+
+
+
+
+  .price{
+    font-family:  var(--general) !important;
   }
   .price ul li.cross::before {
     content: "X"; 
@@ -76,6 +128,9 @@ html {
   height: 1px; /* Line thickness */
   background-color: rgb(230, 226, 226); /* Line color */
   margin: 10px 0; /* Space before and after the line */
+}
+.data{
+  font-family:  var(--general) !important;
 }
 .data h1, .data h2, .data h3, .data h4, .data h5, .data h6 {
   font-size: 28px;

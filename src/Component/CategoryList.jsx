@@ -4,7 +4,7 @@
  import Link from 'next/link';
  import { AiOutlineLoading3Quarters } from 'react-icons/ai'; // If using react-icons
   export default function  CategoryList  ({ categories })  {
-  console.log(categories )
+
   const [visibleBlogs, setVisibleBlogs] = useState(5);
 
   const loadMoreBlogs = () => {
@@ -27,7 +27,7 @@
             <div className="space-y-4 w-full">
               {visiblePosts.map((post, index) => (
                 <div key={post.id} className="relative pl-8 lg:pl-36">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="bg-white rounded-lg border-b overflow-hidden">
                     <div className="flex flex-col lg:flex-row gap-4 p-4 sm:p-6">
                       <div className="w-full lg:w-[400px] h-[200px] relative">
                         {post.featuredImage?.node?.sourceUrl ? (
@@ -44,7 +44,7 @@
                       </div>
                       <div className="flex flex-col space-y-4 flex-1">
                         <h3 className="text-2xl font-semibold">
-                          <Link href={`/post/ ${post.id}`}
+                          <Link href={`/post/ ${post.slug}`}
                             
                             className="text-gray-800 hover:text-[#2980b9]"
                             >
@@ -96,7 +96,7 @@
               <div className="text-center mt-8">
                 <button
                   onClick={loadMoreBlogs}
-                  className="bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-sm hover:bg-[#2980b9] transition duration-300 text-lg font-semibold"
+                  className="bg-gray-800 text-white px-4 sm:px-6 py-3 rounded hover:bg-[#2980b9] transition duration-300 text-lg font-semibold"
                   disabled={visibleBlogs >= categories.length}
                 >
                   {visibleBlogs >= categories.length ? "No more posts" : "LOAD MORE"}

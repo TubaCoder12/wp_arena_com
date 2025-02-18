@@ -4,20 +4,20 @@ import React from "react";
 const HostingQuiz = () => {
   return (
     <section className="px-4 lg:px-12">
-      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center gap-12 items-center right-bg-custom-img relative p-6 rounded">
+      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center gap-[300px] items-center right-bg-custom-img relative p-6 rounded">
         {/* Image Section */}
         <div className="lg:max-w-md w-full">
           <Image 
             src="/quiz-banner.png"
-            width={700}
-            height={750}
+            width={900}
+            height={950}
             alt="Quiz Banner: Which WordPress Hosting is Best for You?" 
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover "
           />
         </div>
 
         {/* Content Section */}
-        <div className="w-full max-w-2xl bg-no-repeat bg-contain bg-right mt-3 py-5 text-center lg:text-left">
+        <div className="w-full max-w-4xl bg-no-repeat bg-contain bg-right mt-3 py-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
             Which WordPress Hosting is Best for You?
           </h1>
@@ -46,7 +46,7 @@ const HostingQuiz = () => {
 
           {/* Call-to-Action Button */}
           <div className="mt-6 flex justify-center lg:justify-start">
-            <button className="w-[170px] h-[45px] uppercase py-2 px-4 bg-gray-800 hover:bg-[#2980b9] font-semibold rounded-sm text-white transition duration-300">
+            <button className="w-[170px] h-[45px] uppercase py-2 px-4 bg-gray-800 hover:bg-[#2980b9] font-semibold rounded text-white transition duration-300">
               Take the quiz
             </button>
           </div>

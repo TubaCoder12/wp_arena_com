@@ -6,7 +6,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react
 export default function Footer() {
   return (
     <footer
-      className="relative bg-cover bg-center bg-no-repeat text-white py-10"
+      className="relative bg-cover bg-center bg-no-repeat text-white py-10 mt-8"
       style={{ backgroundImage: "url('/Footer.jpg')" }}
     >
       {/* Logo and Description */}

@@ -142,6 +142,7 @@ export async function getStaticProps() {
             title
             content
             date
+            slug
             featuredImage {
               node {
                 sourceUrl

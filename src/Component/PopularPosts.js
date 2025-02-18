@@ -34,7 +34,7 @@ export default function PopularPosts({ services }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {sanitizedServices.slice(0, visibleServices).map((service) => (
-            <Link key={service.id} href={`/Services/${service.id}`} passHref>
+            <Link key={service.id} href={`/Services/${service.slug}`} passHref>
               <div className="relative group bg-gray-100 p-6 rounded-lg shadow overflow-hidden transition">
                 {/* Hover Background */}
                 <div
@@ -65,8 +65,8 @@ export default function PopularPosts({ services }) {
 
                   {/* Safe Content Rendering */}
                   <p
-                    className="text-gray-600 mt-2 group-hover:text-white"
-                    dangerouslySetInnerHTML={{ __html: service.sanitizedContent + "..." }}
+                    className="text-gray-600 mt-2 group-hover:text-white "
+                    dangerouslySetInnerHTML={{ __html: service.sanitizedContent + "" }}
                   />
                 </div>
               </div>
