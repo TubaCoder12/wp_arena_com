@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { gql } from "@apollo/client";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import client from "./Apollo";
+import client from "../lab/apolloClient";
 
 // ✅ GraphQL Query for Popular Services
 export const GET_POPULAR_POSTS = gql`
