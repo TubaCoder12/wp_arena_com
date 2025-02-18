@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { gql } from "@apollo/client";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import client from "../lab/apolloClient";
+import client from "../lab/Client";
 
 // ✅ GraphQL Query for Latest Posts
 export const GET_ALL_POSTS = gql`
