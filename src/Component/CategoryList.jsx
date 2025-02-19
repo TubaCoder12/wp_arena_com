@@ -91,7 +91,7 @@
                 </div>
               ))}
             </div>
-            <div className="absolute bottom-0 left-0 sm:left-[46px] w-3 sm:w-4 h-3 sm:h-4 bg-gray-800 rounded-full"></div>
+            <div className="absolute bottom-0 left-0 sm:left-[46px] w-3 sm:w-4 h-3 sm:h-4 bg-gray-800 rounded-full hidden lg:block"></div>
             {visibleBlogs < categories.length && (
               <div className="text-center mt-8">
                 <button

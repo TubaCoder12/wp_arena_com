@@ -40,8 +40,11 @@ const ServicesBar = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >
+         <div className="p-6">
+          <Image src="/logo.png" alt="Logo" width={120} height={50} />
+        </div>
         <div className="flex flex-col gap-6 py-4 h-full text-white px-4">
-          
+         
            
           {MyServicesData.map((elem) => (
             <Link
@@ -63,11 +66,13 @@ const ServicesBar = () => {
             </Link>
           ))}
         </div>
+       
       </div>
 
 
 
       <div className="hidden lg:flex bg-[#2980b9] flex-wrap justify-center gap-4 w-full items-center text-white py-4">
+       
         
         {MyServicesData.map((elem) => (
           <Link
@@ -75,15 +80,16 @@ const ServicesBar = () => {
             key={elem.id}
             className="group rounded-md overflow-hidden transition duration-300"
           >
-            <div className="flex items-center border-[2.75px] border-[#5288c1] bg-[#2a78ab] rounded w-[271px] h-[42px] px-4 py-1.5 relative">
+            <div className="flex items-center border-[2px] border-[#6ba6cf] bg-[#2a78ab] rounded w-[271px] h-[42px] px-4 py-1.5 relative">
               <div className="absolute inset-0 bg-black transform -translate-x-full transition-transform duration-500 ease-out lg:hidden"></div>
               <div className="pr-4 relative z-10">
                 <Image src={elem.ServicesIcon} alt={elem.ServicesTitle} width={20} height={20} />
               </div>
-              <div className="pl-4 border-l border-[#5288c1] relative z-10 flex-1 text-center ">
+              <div className="pl-4 border-l border-[#5087c0] relative z-10 flex-1 text-center ">
                 <h3 className="font-bold text-sm uppercase text-white transition duration-300">
                   {elem.ServicesTitle}
                 </h3>
+               
               </div>
             </div>
           </Link>

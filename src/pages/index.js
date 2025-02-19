@@ -189,6 +189,7 @@ const handleRouteClick = (route) => {
   return (
     <>
       <Head>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"></link>
         <title>{pageData.rankMathTitle}</title>
         <meta name="description" content={pageData.rankMathDescription} />
         <meta name="keywords" content={pageData.rankMathFocusKeyword} />

@@ -4,7 +4,7 @@ import React from "react";
 const HostingQuiz = () => {
   return (
     <section className="px-4 lg:px-12">
-      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center gap-[300px] items-center right-bg-custom-img relative p-6 rounded">
+      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center lg:gap-[200px] gap-10 items-center right-bg-custom-img relative p-6 rounded">
         {/* Image Section */}
         <div className="lg:max-w-md w-full">
           <Image 

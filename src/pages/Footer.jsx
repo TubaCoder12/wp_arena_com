@@ -48,17 +48,18 @@ export default function Footer() {
       <hr className="border-gray-500 mb-6" />
 
       {/* Footer Links */}
-      <div className="flex justify-center space-x-4 text-gray-300 text-sm mb-8">
-        {[
-          "News", "Tutorials", "Reviews", "Comparison", "Resources", 
-          "Collection", "Site Map", "Privacy Policy", "Terms of Service", "Contact"
-        ].map((link, index) => (
-          <span key={index} className="hover:text-white">
-            {link}
-            {index < 9 && <span className="mx-4">|</span>}
-          </span>
-        ))}
-      </div>
+      <div className="flex justify-center text-gray-300 text-sm mb-8 flex-wrap gap-x-4 gap-y-2 md:gap-y-0">
+  {[
+    "News", "Tutorials", "Reviews", "Comparison", "Resources",
+    "Collection", "Site Map", "Privacy Policy", "Terms of Service", "Contact"
+  ].map((link, index) => (
+    <span key={index} className="hover:text-white flex items-center">
+      {link}
+      {index < 9 && <span className="hidden md:inline mx-4">|</span>}
+    </span>
+  ))}
+</div>
+
 
       <hr className="border-gray-500" />
 

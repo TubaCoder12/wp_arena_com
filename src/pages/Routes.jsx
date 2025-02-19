@@ -6,7 +6,7 @@ const Routes = ({ onRouteClick }) => {
 
   return (
     <nav className="bg-white p-8 border-b-2 ">
-      <ul className="flex lg:space-x-4 lg:mx-28   space-x-2">
+      <ul className="flex lg:space-x-4 lg:mx-28 md:mx-14 mx-3  space-x-2">
         {[
           { href: "/review", label: "Reviews" },
           { href: "/news", label: "News" },
@@ -21,7 +21,7 @@ const Routes = ({ onRouteClick }) => {
                 e.preventDefault(); // Prevent page reload
                 onRouteClick(route.label);
               }}
-              className={` px-4 py-2 border-2 border-black rounded transition duration-300 sm: 
+              className={`px-2 py-2 border-2 border-black rounded transition duration-300 sm: 
                 ${
                   pathname?.startsWith(route.href)
                     ? "bg-black text-white"

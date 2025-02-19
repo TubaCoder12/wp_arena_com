@@ -20,17 +20,22 @@ export default function PostList({ pageData }) {
             {pageData?.rankMathDescription || "Default Description"}
           </p>
           <div className="mt-4 lg:mt-8">
-            <form className="flex flex-col sm:flex-row">
-              <input
-                className="w-full sm:w-1/2 h-12 px-4 text-lg font-semibold text-black outline-none"
-                type="email"
-                placeholder="Email: *"
-              />
-              <button className="w-[170px] h-[45px] rounded-sm bg-gray-800 px-6 py-3 text-white hover:bg-[#2980b9] font-semibold">
-                START NOW
-              </button>
-            </form>
-          </div>
+  <form className="relative w-full sm:w-2/3 md:w-[400px] lg:w-[600px]">
+    <input
+      className="w-full h-12 px-3 pr-[150px] text-lg font-semibold text-black outline-none border border-gray-300 rounded-sm"
+      type="email"
+      placeholder="Email: *"
+    />
+    <button className="absolute right-0 top-1/2 -translate-y-1/2 w-[140px] h-[46px] bg-gray-800 text-white text-sm font-semibold rounded-r-sm px-6 py-2 hover:bg-[#2980b9] whitespace-nowrap">
+      START NOW
+    </button>
+  </form>
+</div>
+
+
+
+
+
         </div>
 
         {/* Right Side - Image */}
