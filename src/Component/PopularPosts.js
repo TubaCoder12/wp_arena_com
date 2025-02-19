@@ -27,9 +27,9 @@ export default function PopularPosts({ services }) {
   return (
     <section className="my-10">
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Pro Services</h2>
-        <p className="text-gray-600 mt-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s.
+        <h2 className="text-4xl font-semibold text-gray-800">Pro Services</h2>
+        <p className="text-gray-600 mt-4 mx-20">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s.It has been the industry's standard dummy text ever since the 1500s.It has been the industry's standard dummy 
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">

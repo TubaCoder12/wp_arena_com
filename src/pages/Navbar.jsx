@@ -63,7 +63,7 @@ export default function Navbar() {
     type="text"
     placeholder="Search"
     className={`rounded-md px-2 py-2 text-sm focus:outline-none transition-all duration-300 ease-in-out placeholder:text-[#5c5c5c]  
-      w-[150px] sm:w-[100px] md:w-[100px] lg:w-[100px] 
+      w-[150px] sm:w-[100px] md:w-[100px] lg:w-[85px] 
       ${isSearchFocused ? "lg:w-[300px]" : ""}
     `}
     onFocus={handleSearchFocus}
@@ -78,7 +78,7 @@ export default function Navbar() {
          
 
        {/* Account Button */}
-       <button className="hidden sm:block border-2 border-[#383838] px-5 py-2 rounded font-semibold hover:bg-black hover:text-white
+       <button className="hidden sm:block border-2 border-[#383838] px-6 py-2 rounded font-semibold hover:bg-black hover:text-white
         text-[#383838]">
   MY ACCOUNT
 </button>

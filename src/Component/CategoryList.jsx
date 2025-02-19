@@ -27,7 +27,7 @@
             <div className="space-y-4 w-full">
               {visiblePosts.map((post, index) => (
                 <div key={post.id} className="relative pl-8 lg:pl-36">
-                  <div className="bg-white rounded-lg border-b overflow-hidden">
+                  <div className="bg-white   overflow-hidden">
                     <div className="flex flex-col lg:flex-row gap-4 p-4 sm:p-6">
                       <div className="w-full lg:w-[400px] h-[200px] relative">
                         {post.featuredImage?.node?.sourceUrl ? (
@@ -36,7 +36,7 @@
                             alt={post.featuredImage.node.altText || "Post image"}
                             layout="fill"
                             objectFit="cover"
-                            className="rounded-lg"
+                            className=""
                           />
                         ) : (
                           <div className="w-full h-full bg-gray-200 rounded-lg"></div>
@@ -51,7 +51,7 @@
                             {post.title}
                           </Link>
                         </h3>
-                        <p className="text-sm font-semibold text-black flex">
+                        <p className="text-sm font-semibold text-[#4d4d4d] flex">
                           Recently updated by
                           <span className="text-[#2980b9] ml-2 flex items-center">
                             {post.author?.node?.name || "Unknown Author"}
@@ -96,7 +96,7 @@
               <div className="text-center mt-8">
                 <button
                   onClick={loadMoreBlogs}
-                  className="bg-gray-800 text-white px-4 sm:px-6 py-3 rounded hover:bg-[#2980b9] transition duration-300 text-lg font-semibold"
+                  className="bg-gray-800 text-white px-4 sm:px-6 py-3 rounded hover:bg-[#2980b9] transition duration-300 text-lg font-[500]"
                   disabled={visibleBlogs >= categories.length}
                 >
                   {visibleBlogs >= categories.length ? "No more posts" : "LOAD MORE"}

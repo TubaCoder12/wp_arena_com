@@ -1,8 +1,10 @@
 'use client'; // Ensures client-side rendering
 
 import Image from "next/image";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
-
+import {  FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { PiGitlabLogo } from "react-icons/pi";
 export default function Footer() {
   return (
     <footer
@@ -22,38 +24,44 @@ export default function Footer() {
         <p className="text-gray-300 max-w-7xl mx-auto text-sm leading-relaxed">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s.
+          ever since the 1500s.Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500sLorem Ipsum has been the industry's standard dummy text
+        
         </p>
       </div>
       
       {/* Social Icons */}
-      <div className="flex justify-center space-x-6 mb-8">
-        <a href="#" className="text-gray-400 hover:text-blue-400 border border-gray-400 rounded-full p-3">
-          <FaFacebook />
+      <div className="flex justify-center space-x-4 mb-8">
+        <a href="#" className="text-white hover:bg-blue-400 border border-gray-400 rounded-full p-3">
+          <FaFacebookF />
         </a>
-        <a href="#" className="text-gray-400 hover:text-blue-200 border border-gray-400 rounded-full p-3">
-          <FaTwitter />
+        <a href="#" className="text-white hover:bg-blue-400 border border-gray-400 rounded-full p-3">
+          <FaXTwitter />
         </a>
-        <a href="#" className="text-gray-400 hover:text-blue-400 border border-gray-400 rounded-full p-3">
+        <a href="#" className="text-white hover:bg-blue-400 border border-gray-400 rounded-full p-3">
           <FaLinkedin />
         </a>
-        <a href="#" className="text-gray-400 hover:text-pink-300 border border-gray-400 rounded-full p-3">
+        <a href="#" className="text-white  hover:bg-blue-400 border border-gray-400 rounded-full p-3">
           <FaInstagram />
         </a>
-        <a href="#" className="text-gray-400 hover:text-red-500 border border-gray-400 rounded-full p-3">
+        <a href="#" className="text-white  hover:bg-blue-400 border border-gray-400 rounded-full p-3">
           <FaYoutube />
+
+        </a>
+        <a href="#" className="text-white  hover:bg-blue-400 border border-gray-400 rounded-full p-3">
+          <PiGitlabLogo />
         </a>
       </div>
 
-      <hr className="border-gray-500 mb-6" />
+      <hr className="border-gray-500 w-[1200px] mx-auto  " />
 
       {/* Footer Links */}
-      <div className="flex justify-center text-gray-300 text-sm mb-8 flex-wrap gap-x-4 gap-y-2 md:gap-y-0">
+      <div className="flex justify-center text-gray-300 text-sm my-4 flex-wrap gap-x-4 gap-y-2 md:gap-y-0 ">
   {[
     "News", "Tutorials", "Reviews", "Comparison", "Resources",
     "Collection", "Site Map", "Privacy Policy", "Terms of Service", "Contact"
   ].map((link, index) => (
-    <span key={index} className="hover:text-white flex items-center">
+    <span key={index} className="hover:text-white flex items-center font-semibold">
       {link}
       {index < 9 && <span className="hidden md:inline mx-4">|</span>}
     </span>
@@ -61,15 +69,15 @@ export default function Footer() {
 </div>
 
 
-      <hr className="border-gray-500" />
+      <hr className="border-gray-500 w-[1200px] mx-auto " />
 
       {/* Copyright */}
-      <div className="text-center text-gray-100 text-xs pt-3">
+      <div className="text-center text-gray-100 text-xs pt-5">
         <p>
           Copyright © 2024 - All Rights Reserved - WPArena is a Project of
           TechAbout LLC.
         </p>
-        <p>We are not affiliated with Automattic or WordPress.</p>
+        <p className="mt-2">We are not affiliated with Automattic or WordPress.</p>
       </div>
     </footer>
   );

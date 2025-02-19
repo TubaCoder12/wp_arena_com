@@ -5,13 +5,13 @@ const Routes = ({ onRouteClick }) => {
   const pathname = usePathname()?.toLowerCase(); // Ensure lowercase for accurate matching
 
   return (
-    <nav className="bg-white p-8 border-b-2 ">
+    <nav className="bg-white pt-20  ">
       <ul className="flex lg:space-x-4 lg:mx-28 md:mx-14 mx-3  space-x-2">
         {[
-          { href: "/review", label: "Reviews" },
-          { href: "/news", label: "News" },
-          { href: "/latest", label: "Latest" },
-          { href: "/editorials", label: "Editorials" },
+          { href: "/review", label: "REVIEWS" },
+          { href: "/news", label: "NEWS" },
+          { href: "/latest", label: "LATEST" },
+          { href: "/editorials", label: "EDITORIALS" },
          
         ].map((route) => (
           <li key={route.href}>
@@ -21,7 +21,7 @@ const Routes = ({ onRouteClick }) => {
                 e.preventDefault(); // Prevent page reload
                 onRouteClick(route.label);
               }}
-              className={`px-2 py-2 border-2 border-black rounded transition duration-300 sm: 
+              className={`px-2 py-2 border-2 border-[#4d4d4d] rounded transition duration-300 sm lg:px-14 font-semibold
                 ${
                   pathname?.startsWith(route.href)
                     ? "bg-black text-white"

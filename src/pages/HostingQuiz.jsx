@@ -3,22 +3,22 @@ import React from "react";
 
 const HostingQuiz = () => {
   return (
-    <section className="px-4 lg:px-12">
-      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center lg:gap-[200px] gap-10 items-center right-bg-custom-img relative p-6 rounded">
+    <section className="px-4 lg:pl-12 mx-10">
+      <div className="bg-[#ebf1ff] flex flex-col lg:flex-row justify-center lg:gap-[80px] gap-10 items-center right-bg-custom-img relative p-4 rounded">
         {/* Image Section */}
-        <div className="lg:max-w-md w-full">
+        <div className="lg:max-w-[560px] w-full">
           <Image 
             src="/quiz-banner.png"
-            width={900}
-            height={950}
+            width={1000}
+            height={1000}
             alt="Quiz Banner: Which WordPress Hosting is Best for You?" 
             className="w-full h-auto object-cover "
           />
         </div>
 
         {/* Content Section */}
-        <div className="w-full max-w-4xl bg-no-repeat bg-contain bg-right mt-3 py-5 text-center lg:text-left">
-          <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+        <div className="w-full max-w-5xl bg-no-repeat bg-contain bg-right mt-3 py-5 text-center lg:text-left">
+          <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold">
             Which WordPress Hosting is Best for You?
           </h1>
           <p className="text-lg font-medium mt-4">
@@ -26,12 +26,12 @@ const HostingQuiz = () => {
           </p>
 
           {/* Bullet Points */}
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-4 ">
             {[
               "It is a long established fact that a reader will be distracted by the readable content of a page.",
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             ].map((text, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <div key={index} className="flex items-center gap-4 ">
                 <Image 
                   src="/arrow.png"
                   width={32}
@@ -39,7 +39,7 @@ const HostingQuiz = () => {
                   alt="Arrow icon"
                   className="flex-shrink-0"
                 />
-                <p className="text-lg md:text-base font-medium">{text}</p>
+                <p className="text-lg md:text-base font-bold">{text}</p>
               </div>
             ))}
           </div>

@@ -201,8 +201,9 @@ const handleRouteClick = (route) => {
         {activeRoute === "News" && <CategoryList categories={NewsPosts} />}
         {activeRoute === "Latest" && <CategoryList categories={LatestPost} />}
         <HostingQuiz/>
-        <FeaturedPost posts={featuredPost} />
+      
         <PopularPosts services={popularPosts} />
+        <FeaturedPost posts={featuredPost} />
        
     </>
   );

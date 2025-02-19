@@ -9,7 +9,7 @@ export default function FeaturedPosts({ posts }) {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold">WPArena Coupons and Deals</h1>
         <p className="text-gray-600 mt-4 max-w-6xl mx-auto leading-relaxed">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>
 

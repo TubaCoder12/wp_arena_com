@@ -31,7 +31,7 @@ const ServicesBar = () => {
   }`}
   onClick={toggleMenu}
 >
-  <Image src={ServicesIcon} alt="Toggle Menu" width={38} height={38} />
+  <Image src={ServicesIcon} alt="Toggle Menu" width={60} height={60} />
 </div>
 
 
@@ -78,15 +78,15 @@ const ServicesBar = () => {
           <Link
             href={elem.ServicesUrl}
             key={elem.id}
-            className="group rounded-md overflow-hidden transition duration-300"
+            className="group rounded overflow-hidden transition duration-300"
           >
             <div className="flex items-center border-[2px] border-[#6ba6cf] bg-[#2a78ab] rounded w-[271px] h-[42px] px-4 py-1.5 relative">
               <div className="absolute inset-0 bg-black transform -translate-x-full transition-transform duration-500 ease-out lg:hidden"></div>
               <div className="pr-4 relative z-10">
                 <Image src={elem.ServicesIcon} alt={elem.ServicesTitle} width={20} height={20} />
               </div>
-              <div className="pl-4 border-l border-[#5087c0] relative z-10 flex-1 text-center ">
-                <h3 className="font-bold text-sm uppercase text-white transition duration-300">
+              <div className="pl-1 border-l-2 border-[#5087c0] relative z-10 flex-1 text-center ">
+                <h3 className="font-[600] text-sm uppercase text-[#eaf1f6] transition duration-300">
                   {elem.ServicesTitle}
                 </h3>
                
