@@ -49,7 +49,7 @@ const Timeline = ({ services }) => {
               <div className="space-y-4 w-full lg:mx-auto">
                 {visiblePosts.map((service, index) => (
                   <div key={service.id} className="relative pl-8 lg:pl-36">
-                    <div className="bg-white rounded-lg border-b overflow-hidden">
+                    <div className="bg-white  overflow-hidden">
                       <div className="flex flex-col lg:flex-row gap-4 p-4 sm:p-6">
                         <div className="w-full lg:w-[400px] h-[200px] relative">
                           {service.featuredImage?.node?.sourceUrl ? (
@@ -64,7 +64,7 @@ const Timeline = ({ services }) => {
                             <div className="w-full h-full bg-gray-200 rounded-lg"></div>
                           )}
                         </div>
-                        <div className="flex flex-col space-y-4 flex-1">
+                        <div className="flex flex-col space-y-4 flex-1 ml-8">
                           <h3 className="text-2xl font-semibold">
                             <Link href={`/Services/${service.slug}`} className="text-gray-800 hover:text-[#2980b9]">
                               {service.title}

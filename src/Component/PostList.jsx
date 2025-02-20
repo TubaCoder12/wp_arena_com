@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function PostList({ pageData }) {
+  
   if (!pageData) {
     return <p className="text-red-400">No page data available.</p>;
   }
@@ -14,7 +15,7 @@ export default function PostList({ pageData }) {
         {/* Left Side - Content */}
         <div className="left w-full lg:w-[35%] md:w-1/2 mb-8 md:mb-0 lg:mr-[155px]">
           <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-gray-700">
-            {pageData?.title || "Default Title"}
+          16 Years of Passion & Expertise
           </h1>
           <p className="text-center text-gray-700 sm:text-left font-medium mt-4 lg:mt-8 text-sm md:text-base lg:text-xl">
             {pageData?.rankMathDescription || "Default Description"}

@@ -42,7 +42,7 @@
                           <div className="w-full h-full bg-gray-200 rounded-lg"></div>
                         )}
                       </div>
-                      <div className="flex flex-col space-y-4 flex-1">
+                      <div className="flex flex-col space-y-4 flex-1 ml-8">
                         <h3 className="text-2xl font-semibold">
                           <Link href={`/post/ ${post.slug}`}
                             
@@ -60,7 +60,7 @@
                               alt="share-icon"
                               width={15}
                               height={15}
-                              className="ml-2 bg-[#297fba] p-0.5 rounded-sm"
+                              className="ml-2 bg-[#297fba] p-1 rounded-sm"
                             />
                           </span>
                         </p>

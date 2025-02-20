@@ -7,12 +7,12 @@ const Routes = ({ onRouteClick }) => {
   return (
     <nav className="bg-white pt-20  ">
       <ul className="flex lg:space-x-4 lg:mx-28 md:mx-14 mx-3  space-x-2">
-        {[
-          { href: "/review", label: "REVIEWS" },
-          { href: "/news", label: "NEWS" },
-          { href: "/latest", label: "LATEST" },
-          { href: "/editorials", label: "EDITORIALS" },
-         
+      {[
+          { href: "/review", label: "Reviews" },
+          { href: "/news", label: "News" },
+          { href: "/latest", label: "Latest" },
+          { href: "/editorials", label: "Editorials" },
+          
         ].map((route) => (
           <li key={route.href}>
             <Link

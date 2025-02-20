@@ -35,7 +35,7 @@ export default function PopularPosts({ services }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {sanitizedServices.slice(0, visibleServices).map((service) => (
             <Link key={service.id} href={`/Services/${service.slug}`} passHref>
-              <div className="relative group bg-gray-100 p-6 rounded-lg shadow overflow-hidden transition">
+              <div className="relative group bg-[#f9fafe] p-6 rounded-lg shadow overflow-hidden transition">
                 {/* Hover Background */}
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition"
@@ -43,7 +43,7 @@ export default function PopularPosts({ services }) {
                 ></div>
 
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="bg-blue-100 rounded-full p-4 group-hover:bg-gray-700">
+                  <div className="bg-blue-50 rounded-full p-4 group-hover:bg-gray-700">
                     {service.featuredImage?.node?.sourceUrl ? (
                       <Image
                         src={service.featuredImage.node.sourceUrl}

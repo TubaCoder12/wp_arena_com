@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Navbar from "./Navbar";
-import Hero from "./Hero";
+
 
 import Footer from "./Footer";
 import Navbar2 from "./Navbar2";

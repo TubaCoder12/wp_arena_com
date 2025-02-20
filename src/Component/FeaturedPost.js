@@ -14,34 +14,37 @@ export default function FeaturedPosts({ posts }) {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-10">
         {posts.map((post) => {
           const acfData = post.acf ? JSON.parse(post.acf) : {}; // JSON Parse
 
           return (
             <div
               key={post.id}
-              className="bg-white shadow-[0_0_10px_2px_rgba(0,0,0,0.1)] rounded-lg p-6 flex items-center space-x-4"
+              className="bg-white border rounded-lg py-3  px-4 flex items-center space-x-4"
             >
               {/* Image */}
-              <div className="w-16 h-16 mt-6">
-                <Image
-                  src={post.featuredImage?.node?.sourceUrl || "/fallback-image.jpg"}
-                  alt={post.title}
-                  width={100}
-                  height={100}
-                  className="object-contain rounded-full"
-                />
-              </div>
-              <div className="text-gray-300 text-3xl h-10">|</div>
+              <div className="border rounded-full flex items-center p-3">
+  <div className="w-14 h-14 overflow-hidden rounded-full">
+    <Image
+      src={post.featuredImage?.node?.sourceUrl || "/fallback-image.jpg"}
+      alt={post.title}
+      width={54}
+      height={54}
+      className="object-cover w-full h-full rounded-full"
+    />
+  </div>
+</div>
+
+              <div className="text-gray-300 border-l-2 text-3xl h-20 pr-4"></div>
 
               {/* Title & Discount */}
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">{post.title}</h3>
+                <h3 className="text-[18px] font-semibold text-[#161a3a] pr-4  ">{post.title}</h3>
 
                 {/* Discount Display */}
                 {acfData.coupons_discount && (
-                  <p className="mt-1 text-lg text-blue-500 ">
+                  <p className="mt-1  text-[#629eca] font-[500] ">
                     {acfData.coupons_discount}% OFF
                   </p>
                 )}
